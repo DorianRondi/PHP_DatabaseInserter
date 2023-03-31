@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['submit1'])){
-    header("Location:http://127.0.0.1:8000/indexbis.php");
+    header("Location:http://127.0.0.1:8000/redirect.php");
 }
 require_once 'connect.php';
 $pdo = new \PDO(DSN, USER, PASS);

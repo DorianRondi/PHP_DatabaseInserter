@@ -1,6 +1,6 @@
 <?php
-if(isset($_POST['submit1'])){
-    header("Location:http://127.0.0.1:8000/redirect.php");
+if(isset($_POST['submit'])){
+    header("Location:/redirect.php");
 }
 require_once 'connect.php';
 $pdo = new \PDO(DSN, USER, PASS);
@@ -39,12 +39,12 @@ function amigo(array $friend){
         <input type="text" id="firstname" name="firstname" >
         <label for="lastname">Nom</label>
         <input type="text" id="lastname" name="lastname" >
-        <input type="submit" name="submit1">
+        <input type="submit" name="submit">
     </fieldset>
 </form>
 
 <ul>
-    <?php FOREACH($friends as $listItem): ?>
+    <?php foreach($friends as $listItem): ?>
     <li><?= amigo($listItem); ?></li>
-    <?php ENDFOREACH ?>
+    <?php endforeach ?>
 </ul>
